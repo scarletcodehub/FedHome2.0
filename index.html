@@ -1,0 +1,46 @@
+<!doctype html>
+<html lang="en">
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1">
+<title>FedHome 2.0 · Student Demo</title>
+<link rel="stylesheet" href="site.css">
+<script src="site.js" defer></script>
+<main>
+  <header>
+    <h1>FedHome 2.0</h1>
+    <p>Five simulated smart homes train a shared classifier. Compare how averaging and median aggregation respond when one home sends a misleading model update.</p>
+  </header>
+  <section aria-labelledby="homes-title">
+    <h2 id="homes-title">Simulated homes</h2>
+    <ul class="homes">
+      <li><strong>Home 1</strong>Normal</li><li><strong>Home 2</strong>Normal</li>
+      <li><strong>Home 3</strong>Normal</li><li><strong>Home 4</strong>Normal</li>
+      <li class="attacker"><strong>Home 5</strong>Simulated attacker</li>
+    </ul>
+  </section>
+  <section aria-labelledby="comparison-title">
+    <h2 id="comparison-title">Federated learning comparison</h2>
+    <div class="controls">
+      <label>Data source <select id="source">
+        <option value="simulation">Simulation results</option>
+        <option value="mock">Hardcoded visual demo</option>
+      </select></label>
+      <label>Metric <select id="metric">
+        <option value="accuracy">Accuracy</option><option value="f1">F1 score</option>
+      </select></label>
+    </div>
+    <p id="notice" role="status">Loading results…</p>
+    <ul id="legend" class="legend"></ul>
+    <canvas id="chart" role="img" aria-label="Performance by training round"></canvas>
+    <details>
+      <summary>View data by round</summary>
+      <div class="table-wrap"><table id="rounds"></table></div>
+    </details>
+    <h3>Final comparison</h3>
+    <div class="table-wrap">
+      <table><thead><tr><th scope="col">Method</th><th scope="col">Accuracy</th><th scope="col">F1 score</th></tr></thead><tbody id="final"></tbody></table>
+    </div>
+  </section>
+  <footer>Classroom simulation using synthetic data. <a href="https://github.com/scarletcodehub/FedHome2.0">View source on GitHub</a>.</footer>
+</main>
+</html>
