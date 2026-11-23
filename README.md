@@ -1,6 +1,8 @@
 # FedHome 2.0
 
-[Open the GitHub Pages dashboard](https://scarletcodehub.github.io/FedHome2.0/).
+[Open the original Streamlit dashboard](https://fedhome20-4kkjweccgpyzlwt7ef6p9x.streamlit.app/).
+
+[Open the GitHub Pages version](https://scarletcodehub.github.io/FedHome2.0/).
 
 The browser dashboard compares Clean FedAvg, Poisoned FedAvg, and Poisoned Median over 25 rounds. Switch between accuracy and F1 score, or select the labeled mock dataset. The published dashboard reads the included simulation results as a static JSON file.
 
